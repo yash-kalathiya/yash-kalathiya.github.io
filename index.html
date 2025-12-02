@@ -3,679 +3,413 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yash Kalathiya | AI/ML Engineer & Data Scientist</title>
-    <meta name="description" content="Portfolio of Yash Kalathiya - AI/ML Engineer specializing in RAG, GraphRAG, Vision-Language Models, and MLOps">
+    <title>Yash Kalathiya — AI/ML Engineer</title>
+    <meta name="description" content="AI/ML Engineer specializing in RAG, GraphRAG, Vision-Language Models, and MLOps. MS Software Engineering at San Jose State University.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.svg">
-    <link rel="apple-touch-icon" href="favicon.svg">
     
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=3">
+    
+    <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
-    <!-- Cursor Glow Effect -->
-    <div class="cursor-glow"></div>
+    <!-- Noise Overlay -->
+    <div class="noise"></div>
     
-    <!-- Particle Background -->
-    <div id="particles-js"></div>
+    <!-- Gradient Orbs -->
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <span class="logo-bracket">&lt;</span>YK<span class="logo-bracket">/&gt;</span>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="logo">
+                <span class="logo-text">YK</span>
             </a>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#achievements" class="nav-link">Achievements</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="nav-toggle" id="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-links">
+                <a href="#work">Work</a>
+                <a href="#about">About</a>
+                <a href="#contact" class="nav-cta">Let's Talk</a>
             </div>
-        </div>
-    </nav>
+            <button class="mobile-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+    <!-- Hero -->
+    <section class="hero">
         <div class="hero-content">
-            <div class="hero-text">
-                <p class="hero-greeting">
-                    <span class="wave">👋</span> Hello, I'm
-                </p>
-                <h1 class="hero-name">Yash Kalathiya</h1>
-                <div class="hero-titles">
-                    <span class="title-wrapper">
-                        <span class="title" id="typed-text"></span>
-                        <span class="cursor">|</span>
-                    </span>
-                </div>
-                <p class="hero-description">
-                    Building intelligent systems that bridge <span class="highlight">AI research</span> and 
-                    <span class="highlight">production reality</span>. Passionate about RAG architectures, 
-                    Edge AI, and MLOps pipelines that scale.
-                </p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">
-                        <span>View My Work</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <span>Get In Touch</span>
-                        <i class="fas fa-paper-plane"></i>
-                    </a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number" data-target="15">0</span>+
-                        <span class="stat-label">Projects</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number" data-target="2">0</span>
-                        <span class="stat-label">IBM Internships</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number" data-target="1">0</span>M+
-                        <span class="stat-label">Lines Processed</span>
-                    </div>
-                </div>
+            <div class="hero-badge">
+                <span class="status-dot"></span>
+                Available for opportunities
             </div>
-            <div class="hero-visual">
-                <div class="hero-image-container">
-                    <div class="image-glow"></div>
-                    <div class="code-window">
-                        <div class="code-header">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                            <span class="file-name">yash.py</span>
-                        </div>
-                        <pre class="code-content"><code><span class="keyword">class</span> <span class="class-name">AIEngineer</span>:
-    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="param">self</span>):
-        <span class="param">self</span>.name = <span class="string">"Yash Kalathiya"</span>
-        <span class="param">self</span>.role = <span class="string">"AI/ML Engineer"</span>
-        <span class="param">self</span>.location = <span class="string">"San Jose, CA"</span>
-        <span class="param">self</span>.expertise = [
-            <span class="string">"RAG & GraphRAG"</span>,
-            <span class="string">"Vision-Language Models"</span>,
-            <span class="string">"MLOps & Edge AI"</span>,
-            <span class="string">"Agentic Workflows"</span>
-        ]
-    
-    <span class="keyword">def</span> <span class="function">solve</span>(<span class="param">self</span>, problem):
-        <span class="keyword">return</span> <span class="param">self</span>.innovate(problem)</code></pre>
+            <h1 class="hero-title">
+                <span class="line">I build AI systems</span>
+                <span class="line">that actually <em>work</em></span>
+                <span class="line accent">in production.</span>
+            </h1>
+            <p class="hero-subtitle">
+                AI/ML Engineer with expertise in RAG, Vision-Language Models, and MLOps. 
+                Currently pursuing MS in Software Engineering at <strong>San Jose State University</strong>.
+                Previously built data pipelines processing 1M+ lines at <strong>IBM</strong>.
+            </p>
+            <div class="hero-cta">
+                <a href="#work" class="btn-primary">
+                    <span>See my work</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/yash-kalathiya" target="_blank" class="btn-ghost">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://linkedin.com/in/yashkalathiya" target="_blank" class="btn-ghost">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span></span><span></span><span></span>
                     </div>
+                    <span class="terminal-title">yash.py</span>
                 </div>
-                <div class="floating-icons">
-                    <div class="float-icon" style="--delay: 0s;"><i class="fab fa-python"></i></div>
-                    <div class="float-icon" style="--delay: 1s;"><i class="fas fa-brain"></i></div>
-                    <div class="float-icon" style="--delay: 2s;"><i class="fab fa-docker"></i></div>
-                    <div class="float-icon" style="--delay: 3s;"><i class="fas fa-database"></i></div>
+                <div class="terminal-body">
+                    <pre><code><span class="kw">class</span> <span class="fn">AIEngineer</span>:
+    <span class="kw">def</span> <span class="fn">__init__</span>(<span class="vr">self</span>):
+        <span class="vr">self</span>.name = <span class="st">"Yash Kalathiya"</span>
+        <span class="vr">self</span>.focus = [
+            <span class="st">"RAG & GraphRAG"</span>,
+            <span class="st">"Vision-Language Models"</span>,
+            <span class="st">"MLOps & Edge AI"</span>,
+        ]
+        <span class="vr">self</span>.currently = <span class="st">"building cool stuff"</span>
+    
+    <span class="kw">def</span> <span class="fn">solve</span>(<span class="vr">self</span>, problem):
+        <span class="kw">return</span> <span class="vr">self</span>.innovate(problem) <span class="cm"># ✨</span></code></pre>
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <span>Scroll Down</span>
+        
+        <div class="scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">01.</span>
-                About Me
-            </h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-intro">
-                        I'm a <span class="highlight">Software Engineering graduate student</span> at 
-                        <span class="highlight">San Jose State University</span>, with a passion for 
-                        building AI systems that don't just work in notebooks—they thrive in production.
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="stat">
+            <span class="stat-value">2×</span>
+            <span class="stat-label">IBM Internships</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+            <span class="stat-value">1M+</span>
+            <span class="stat-label">Lines Processed</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+            <span class="stat-value">9.6</span>
+            <span class="stat-label">GPA / 10</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+            <span class="stat-value">15+</span>
+            <span class="stat-label">Projects</span>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="work">
+        <div class="section-header">
+            <span class="section-tag">Featured Work</span>
+            <h2 class="section-title">Projects that push boundaries</h2>
+        </div>
+        
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <article class="project-card featured">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-type">Agentic AI</span>
+                        <span class="project-year">2025</span>
+                    </div>
+                    <h3 class="project-title">GraphRAG Compliance Agent</h3>
+                    <p class="project-desc">
+                        AI-powered compliance engine using LangGraph and Neo4j. Maps contract clauses to legal risks 
+                        as a knowledge graph with cyclic reasoning for conflict resolution.
                     </p>
-                    <p>
-                        My journey from a Computer Engineering undergrad with a <strong>9.6 GPA</strong> at 
-                        Sarvajanik University to working as a <strong>Data Engineer at IBM</strong> has given 
-                        me a unique perspective on bridging theoretical AI with practical engineering.
-                    </p>
-                    <p>
-                        I specialize in architecting systems that combine the power of <strong>Large Language Models</strong>, 
-                        <strong>Graph Databases</strong>, and <strong>Edge Computing</strong> to solve real-world problems. 
-                        Whether it's building a compliance engine that reasons over legal documents or deploying 
-                        vision models on constrained hardware, I love pushing the boundaries of what's possible.
-                    </p>
-                    <div class="about-highlights">
-                        <div class="highlight-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <div>
-                                <h4>MS Software Engineering</h4>
-                                <p>San Jose State University</p>
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-building"></i>
-                            <div>
-                                <h4>Ex-IBM Data Engineer</h4>
-                                <p>2 Internships</p>
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-trophy"></i>
-                            <div>
-                                <h4>IEEE Award Winner</h4>
-                                <p>National Competition</p>
-                            </div>
-                        </div>
+                    <ul class="project-highlights">
+                        <li>40% better violation detection vs standard RAG</li>
+                        <li>Model Context Protocol for secure document access</li>
+                        <li>Multi-step reasoning with conflict resolution</li>
+                    </ul>
+                    <div class="project-stack">
+                        <span>LangGraph</span>
+                        <span>Neo4j</span>
+                        <span>Python</span>
+                        <span>MCP</span>
+                    </div>
+                    <a href="https://github.com/yash-kalathiya/GraphRAG-Compliance-Agent" target="_blank" class="project-link">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="project-visual">
+                    <div class="project-icon">
+                        <i class="fas fa-project-diagram"></i>
                     </div>
                 </div>
-                <div class="about-image">
-                    <div class="image-frame">
-                        <div class="profile-placeholder">
-                            <i class="fas fa-user-astronaut"></i>
-                        </div>
-                        <div class="frame-decoration"></div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-card">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-type">Computer Vision</span>
+                        <span class="project-year">2025</span>
                     </div>
-                    <div class="education-cards">
-                        <div class="edu-card">
-                            <div class="edu-icon"><i class="fas fa-university"></i></div>
-                            <div class="edu-info">
-                                <h4>San Jose State University</h4>
-                                <p>MS Software Engineering</p>
-                                <span class="edu-date">2025 - 2027</span>
-                            </div>
-                        </div>
-                        <div class="edu-card">
-                            <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
-                            <div class="edu-info">
-                                <h4>Sarvajanik University</h4>
-                                <p>BTech Computer Engineering</p>
-                                <span class="edu-gpa">GPA: 9.6/10</span>
-                            </div>
-                        </div>
+                    <h3 class="project-title">Edge-Native VLM Sentinel</h3>
+                    <p class="project-desc">
+                        Vision-Language Model deployed on edge hardware using ONNX quantization. 
+                        Real-time multimodal reasoning on constrained devices.
+                    </p>
+                    <ul class="project-highlights">
+                        <li>25 FPS real-time reasoning on CPU</li>
+                        <li>Semantic safety filters beyond YOLO</li>
+                    </ul>
+                    <div class="project-stack">
+                        <span>ONNX</span>
+                        <span>VLM</span>
+                        <span>Ollama</span>
                     </div>
+                    <a href="https://github.com/yash-kalathiya/Edge-Native-VLM-Sentinel" target="_blank" class="project-link">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project-card">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-type">MLOps</span>
+                        <span class="project-year">2025</span>
+                    </div>
+                    <h3 class="project-title">Shadow Deployment Pipeline</h3>
+                    <p class="project-desc">
+                        Production-grade shadow deployment system with Feast and GitHub Actions. 
+                        Evaluate models on live traffic without user impact.
+                    </p>
+                    <ul class="project-highlights">
+                        <li>99.9% system reliability</li>
+                        <li>Automatic drift detection with Evidently</li>
+                    </ul>
+                    <div class="project-stack">
+                        <span>Feast</span>
+                        <span>Evidently</span>
+                        <span>Docker</span>
+                    </div>
+                    <a href="https://github.com/yash-kalathiya/Shadow-Deployment-MLOps-Rig" target="_blank" class="project-link">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+        </div>
+
+        <!-- More Projects -->
+        <div class="more-projects">
+            <h3 class="more-title">More Projects</h3>
+            <div class="project-list">
+                <a href="https://github.com/yash-kalathiya/JARVIS" target="_blank" class="project-item">
+                    <div class="project-item-info">
+                        <i class="fas fa-robot"></i>
+                        <div>
+                            <h4>JARVIS</h4>
+                            <p>Voice-activated AI assistant with speech recognition, web automation, and system control</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="https://github.com/yash-kalathiya/Smart_traffic_signal" target="_blank" class="project-item">
+                    <div class="project-item-info">
+                        <i class="fas fa-traffic-light"></i>
+                        <div>
+                            <h4>Smart Traffic Signal</h4>
+                            <p>YOLO-based traffic management with dynamic signal timing optimization</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="https://github.com/yash-kalathiya/hand_sign_recognition" target="_blank" class="project-item">
+                    <div class="project-item-info">
+                        <i class="fas fa-hand-paper"></i>
+                        <div>
+                            <h4>Hand Sign Recognition</h4>
+                            <p>Real-time ASL interpreter with MediaPipe and deep learning, 95%+ accuracy</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
+            <a href="https://github.com/yash-kalathiya?tab=repositories" target="_blank" class="view-all">
+                View all projects on GitHub <i class="fas fa-external-link-alt"></i>
+            </a>
         </div>
     </section>
 
     <!-- Experience Section -->
     <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">02.</span>
-                Work Experience
-            </h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div class="company-logo">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM">
-                            </div>
-                            <div class="timeline-info">
-                                <h3>Data Engineer Intern</h3>
-                                <h4>IBM <span class="location"><i class="fas fa-map-marker-alt"></i> India</span></h4>
-                                <span class="date">Jan 2025 – May 2025</span>
-                            </div>
-                        </div>
-                        <ul class="timeline-achievements">
-                            <li>
-                                <i class="fas fa-check-circle"></i>
-                                <span>Designed a <strong>two-stage code-cleaning pipeline</strong> that removed 100% of commented-out code across ~<strong>1M lines</strong> of Python, Java, and C++</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-check-circle"></i>
-                                <span>Developed a unified adapter for <strong>Vulture and Pylint</strong>, enabling benchmarking across 5+ static analysis tools</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-check-circle"></i>
-                                <span>Trained a <strong>MultinomialNB model</strong> on char-level TF-IDF, reducing model size by ~52% (200MB → 95MB) while maintaining <strong>>97.5% accuracy</strong></span>
-                            </li>
-                            <li>
-                                <i class="fas fa-check-circle"></i>
-                                <span>Automated curation of ~<strong>12K GitHub comment snippets</strong> with >97% annotation accuracy</span>
-                            </li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">ML</span>
-                            <span class="tag">NLP</span>
-                            <span class="tag">Static Analysis</span>
-                        </div>
-                    </div>
-                </div>
+        <div class="section-header">
+            <span class="section-tag">Experience</span>
+            <h2 class="section-title">Where I've worked</h2>
+        </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div class="company-logo">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM">
-                            </div>
-                            <div class="timeline-info">
-                                <h3>Data Engineer Intern</h3>
-                                <h4>IBM <span class="location"><i class="fas fa-map-marker-alt"></i> India</span></h4>
-                                <span class="date">May 2024 – June 2024</span>
-                            </div>
-                        </div>
-                        <ul class="timeline-achievements">
-                            <li>
-                                <i class="fas fa-check-circle"></i>
-                                <span>Developed <strong>'Header Cleanser'</strong> to remove license headers from >500K files, improving training data quality</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-check-circle"></i>
-                                <span>Integrated <strong>scancode-toolkit</strong> to support 90+ languages, reducing non-code noise by ~15% across <strong>100GB+ datasets</strong></span>
-                            </li>
-                            <li>
-                                <i class="fas fa-check-circle"></i>
-                                <span>Enabled scalable execution using <strong>Ray and Docker</strong>, significantly reducing runtime for large-scale processing</span>
-                            </li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span class="tag">Ray</span>
-                            <span class="tag">Docker</span>
-                            <span class="tag">Data Engineering</span>
-                            <span class="tag">Scalability</span>
+        <div class="exp-timeline">
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div class="exp-company">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="company-logo">
+                        <div>
+                            <h3>Data Engineer Intern</h3>
+                            <span class="company-name">IBM</span>
                         </div>
                     </div>
+                    <span class="exp-date">Jan — May 2025</span>
+                </div>
+                <ul class="exp-list">
+                    <li>Built two-stage code-cleaning pipeline removing 100% commented code across <strong>~1M lines</strong></li>
+                    <li>Trained MultinomialNB model reducing size by <strong>52%</strong> while maintaining <strong>97.5% accuracy</strong></li>
+                    <li>Automated curation of ~12K GitHub snippets with <strong>97% annotation accuracy</strong></li>
+                </ul>
+                <div class="exp-tags">
+                    <span>Python</span>
+                    <span>ML</span>
+                    <span>NLP</span>
+                    <span>Static Analysis</span>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div class="exp-company">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="company-logo">
+                        <div>
+                            <h3>Data Engineer Intern</h3>
+                            <span class="company-name">IBM</span>
+                        </div>
+                    </div>
+                    <span class="exp-date">May — Jun 2024</span>
+                </div>
+                <ul class="exp-list">
+                    <li>Developed 'Header Cleanser' processing <strong>500K+ files</strong> for training data quality</li>
+                    <li>Integrated scancode-toolkit supporting <strong>90+ languages</strong> across 100GB+ datasets</li>
+                    <li>Enabled scalable execution with <strong>Ray and Docker</strong></li>
+                </ul>
+                <div class="exp-tags">
+                    <span>Ray</span>
+                    <span>Docker</span>
+                    <span>Data Engineering</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">03.</span>
-                Featured Projects
-            </h2>
-            <p class="section-subtitle">A selection of my most impactful work in AI/ML and MLOps</p>
-            
-            <div class="projects-grid">
-                <!-- Project 1: GraphRAG -->
-                <div class="project-card featured">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-project-diagram"></i>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/yash-kalathiya/GraphRAG-Compliance-Agent" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i>
-                            </a>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <div class="about-text">
+                <span class="section-tag">About</span>
+                <h2 class="about-title">Building the future of AI, one system at a time.</h2>
+                <p>
+                    I'm a Software Engineering grad student at <strong>San Jose State University</strong>, 
+                    passionate about bridging the gap between AI research and production systems.
+                </p>
+                <p>
+                    My focus is on building AI that doesn't just work in Jupyter notebooks—it thrives 
+                    in the real world. From compliance engines that reason over legal documents to 
+                    vision models running on edge devices, I love solving hard problems.
+                </p>
+                <p>
+                    When I'm not coding, I'm probably exploring new research papers or building 
+                    something that probably shouldn't exist.
+                </p>
+                
+                <div class="about-achievements">
+                    <div class="achievement">
+                        <i class="fas fa-medal"></i>
+                        <div>
+                            <strong>2nd Place</strong>
+                            <span>IEEE Data Science Challenge 2.0</span>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <span class="project-category">Agentic AI</span>
-                        <h3 class="project-title">GraphRAG Compliance Agent</h3>
-                        <p class="project-description">
-                            A compliance engine using LangGraph and Neo4j that maps contract clauses to legal risks 
-                            as a knowledge graph. Implements cyclic reasoning loops for complex cross-reference resolution.
-                        </p>
-                        <ul class="project-highlights">
-                            <li><i class="fas fa-arrow-up"></i> 40% increase in violation detection accuracy over standard RAG</li>
-                            <li><i class="fas fa-shield-alt"></i> Model Context Protocol (MCP) for secure document access</li>
-                            <li><i class="fas fa-brain"></i> Multi-step reasoning with conflict resolution</li>
-                        </ul>
-                        <div class="project-tech">
-                            <span>LangGraph</span>
-                            <span>Neo4j</span>
+                    <div class="achievement">
+                        <i class="fas fa-award"></i>
+                        <div>
+                            <strong>Consolation Award</strong>
+                            <span>IEEE CIS NeuraNest Deep Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-skills">
+                <h3>Tech I work with</h3>
+                <div class="skills-grid">
+                    <div class="skill-group">
+                        <h4>Languages</h4>
+                        <div class="skill-tags">
                             <span>Python</span>
-                            <span>MCP</span>
+                            <span>Java</span>
+                            <span>SQL</span>
+                            <span>C++</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h4>AI/ML</h4>
+                        <div class="skill-tags">
+                            <span>PyTorch</span>
+                            <span>TensorFlow</span>
+                            <span>LangChain</span>
+                            <span>LangGraph</span>
                             <span>RAG</span>
                         </div>
                     </div>
-                    <div class="project-glow"></div>
-                </div>
-
-                <!-- Project 2: Edge VLM -->
-                <div class="project-card featured">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-eye"></i>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/yash-kalathiya/Edge-Native-VLM-Sentinel" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">Computer Vision</span>
-                        <h3 class="project-title">Edge-Native VLM Sentinel</h3>
-                        <p class="project-description">
-                            Deployed a Vision-Language Model (Moondream2) on edge hardware using ONNX quantization, 
-                            achieving real-time multimodal reasoning on constrained devices.
-                        </p>
-                        <ul class="project-highlights">
-                            <li><i class="fas fa-tachometer-alt"></i> 25 FPS real-time reasoning on CPU</li>
-                            <li><i class="fas fa-filter"></i> Semantic filters to eliminate safety false positives</li>
-                            <li><i class="fas fa-microchip"></i> CPU-specific acceleration with Ollama</li>
-                        </ul>
-                        <div class="project-tech">
-                            <span>ONNX</span>
-                            <span>VLM</span>
-                            <span>Edge AI</span>
-                            <span>Ollama</span>
-                            <span>Python</span>
-                        </div>
-                    </div>
-                    <div class="project-glow"></div>
-                </div>
-
-                <!-- Project 3: Shadow Deployment -->
-                <div class="project-card featured">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-code-branch"></i>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/yash-kalathiya/Shadow-Deployment-MLOps-Rig" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">MLOps</span>
-                        <h3 class="project-title">Shadow Deployment MLOps Pipeline</h3>
-                        <p class="project-description">
-                            A Shadow Deployment system using Feast (Feature Store) and GitHub Actions for 
-                            evaluating candidate models on live production traffic without user impact.
-                        </p>
-                        <ul class="project-highlights">
-                            <li><i class="fas fa-chart-line"></i> Evidently AI for automatic drift detection</li>
-                            <li><i class="fas fa-shield-alt"></i> 99.9% system reliability with model blocking</li>
-                            <li><i class="fas fa-database"></i> Feature store for training-serving consistency</li>
-                        </ul>
-                        <div class="project-tech">
-                            <span>Feast</span>
-                            <span>GitHub Actions</span>
-                            <span>Evidently AI</span>
+                    <div class="skill-group">
+                        <h4>MLOps & Data</h4>
+                        <div class="skill-tags">
                             <span>Docker</span>
-                        </div>
-                    </div>
-                    <div class="project-glow"></div>
-                </div>
-
-                <!-- Additional Projects -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon small">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/yash-kalathiya/JARVIS" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">JARVIS</h3>
-                        <p class="project-description">
-                            Personal AI assistant inspired by Iron Man's JARVIS. Executes voice-activated commands for web searches, 
-                            app launching, email automation, and system control. Built with speech recognition and text-to-speech 
-                            synthesis for natural conversation flow.
-                        </p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>NLP</span>
-                            <span>Voice AI</span>
-                            <span>Speech Recognition</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon small">
-                            <i class="fas fa-traffic-light"></i>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/yash-kalathiya/Smart_traffic_signal" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Smart Traffic Signal</h3>
-                        <p class="project-description">
-                            Intelligent traffic management system that uses YOLO-based vehicle detection to dynamically adjust 
-                            signal timings. Reduces average wait times by analyzing real-time traffic density and optimizing 
-                            green light allocation across intersections.
-                        </p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>YOLO</span>
-                            <span>OpenCV</span>
-                            <span>Computer Vision</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon small">
-                            <i class="fas fa-hand-paper"></i>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/yash-kalathiya/hand_sign_recognition" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Hand Sign Recognition</h3>
-                        <p class="project-description">
-                            Real-time ASL (American Sign Language) interpreter using MediaPipe for hand landmark detection 
-                            and a custom-trained deep learning classifier. Enables seamless communication for the hearing 
-                            impaired with 95%+ recognition accuracy across 26 alphabets.
-                        </p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>MediaPipe</span>
-                            <span>TensorFlow</span>
-                            <span>Deep Learning</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="projects-cta">
-                <a href="https://github.com/yash-kalathiya?tab=repositories" target="_blank" class="btn btn-outline">
-                    <span>View All Projects</span>
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">04.</span>
-                Technical Arsenal
-            </h2>
-            
-            <div class="skills-container">
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-code"></i>
-                        <h3>Languages</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                            <div class="skill-bar"><div class="skill-progress" style="--progress: 95%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-java"></i>
-                            <span>Java</span>
-                            <div class="skill-bar"><div class="skill-progress" style="--progress: 85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>SQL</span>
-                            <div class="skill-bar"><div class="skill-progress" style="--progress: 90%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-cuttlefish"></i>
-                            <span>C++</span>
-                            <div class="skill-bar"><div class="skill-progress" style="--progress: 80%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-js"></i>
-                            <span>JavaScript</span>
-                            <div class="skill-bar"><div class="skill-progress" style="--progress: 75%"></div></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-brain"></i>
-                        <h3>AI/ML Frameworks</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="TensorFlow">
-                            <span>TensorFlow</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="PyTorch">
-                            <span>PyTorch</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-link"></i>
-                            <span>LangChain</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-project-diagram"></i>
-                            <span>LangGraph</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-bolt"></i>
-                            <span>FastAPI</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-server"></i>
-                        <h3>Data & MLOps</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <img src="https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg" alt="Kafka">
                             <span>Kafka</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="https://www.vectorlogo.zone/logos/neo4j/neo4j-icon.svg" alt="Neo4j">
                             <span>Neo4j</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg" alt="Docker">
-                            <span>Docker</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg" alt="AWS">
+                            <span>Airflow</span>
                             <span>AWS</span>
                         </div>
-                        <div class="skill-item">
-                            <i class="fas fa-wind"></i>
-                            <span>Airflow</span>
+                    </div>
+                    <div class="skill-group">
+                        <h4>Specializations</h4>
+                        <div class="skill-tags accent">
+                            <span>GraphRAG</span>
+                            <span>Vision-Language Models</span>
+                            <span>Edge AI</span>
+                            <span>Agentic Workflows</span>
                         </div>
                     </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-rocket"></i>
-                        <h3>AI Specializations</h3>
-                    </div>
-                    <div class="skill-chips">
-                        <span class="chip">RAG & GraphRAG</span>
-                        <span class="chip">Vision-Language Models</span>
-                        <span class="chip">Agentic Workflows</span>
-                        <span class="chip">Edge AI</span>
-                        <span class="chip">ONNX Runtime</span>
-                        <span class="chip">Feature Stores</span>
-                        <span class="chip">Model Serving</span>
-                        <span class="chip">Qdrant</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section id="achievements" class="achievements">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">05.</span>
-                Achievements
-            </h2>
-            
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <div class="achievement-icon gold">
-                        <i class="fas fa-medal"></i>
-                    </div>
-                    <div class="achievement-content">
-                        <span class="achievement-rank">2nd Place</span>
-                        <h3>IEEE National Project Competition</h3>
-                        <p>Data Science Challenge 2.0</p>
-                        <span class="achievement-year">2024</span>
-                    </div>
-                    <div class="achievement-glow"></div>
-                </div>
-
-                <div class="achievement-card">
-                    <div class="achievement-icon silver">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <div class="achievement-content">
-                        <span class="achievement-rank">Consolation Award</span>
-                        <h3>IEEE CIS NeuraNest</h3>
-                        <p>Deep Learning Challenge</p>
-                        <span class="achievement-year">2024</span>
-                    </div>
-                    <div class="achievement-glow"></div>
-                </div>
-
-                <div class="achievement-card">
-                    <div class="achievement-icon academic">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <div class="achievement-content">
-                        <span class="achievement-rank">9.6/10 GPA</span>
-                        <h3>Academic Excellence</h3>
-                        <p>BTech Computer Engineering</p>
-                        <span class="achievement-year">Sarvajanik University</span>
-                    </div>
-                    <div class="achievement-glow"></div>
                 </div>
             </div>
         </div>
@@ -683,71 +417,47 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">06.</span>
-                Get In Touch
-            </h2>
-            <div class="contact-content">
-                <div class="contact-text">
-                    <h3>Let's Build Something Amazing Together</h3>
-                    <p>
-                        I'm currently looking for new opportunities where I can contribute to 
-                        innovative AI/ML projects. Whether you have a question, want to discuss 
-                        a project, or just want to say hi, I'd love to hear from you!
-                    </p>
-                    <div class="contact-info">
-                        <a href="mailto:yashkalathiya164@gmail.com" class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>yashkalathiya164@gmail.com</span>
-                        </a>
-                        <a href="tel:+14083872107" class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>(408) 387-2107</span>
-                        </a>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>San Jose, CA</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-cta">
-                    <a href="mailto:yashkalathiya164@gmail.com" class="btn btn-primary btn-large">
-                        <span>Say Hello</span>
-                        <i class="fas fa-paper-plane"></i>
-                    </a>
-                    <div class="social-links">
-                        <a href="https://github.com/yash-kalathiya" target="_blank" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/yashkalathiya" target="_blank" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="mailto:yashkalathiya164@gmail.com" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
+        <div class="contact-content">
+            <span class="section-tag">Contact</span>
+            <h2 class="contact-title">Let's build something amazing.</h2>
+            <p class="contact-desc">
+                I'm currently looking for new opportunities. Whether you have a question, 
+                a project idea, or just want to say hi—my inbox is always open.
+            </p>
+            <div class="contact-links">
+                <a href="mailto:yashkalathiya164@gmail.com" class="contact-btn primary">
+                    <i class="fas fa-envelope"></i>
+                    <span>yashkalathiya164@gmail.com</span>
+                </a>
+                <a href="tel:+14083872107" class="contact-btn">
+                    <i class="fas fa-phone"></i>
+                    <span>(408) 387-2107</span>
+                </a>
             </div>
+            <div class="contact-social">
+                <a href="https://github.com/yash-kalathiya" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/yashkalathiya" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:yashkalathiya164@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        <div class="location">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>San Jose, CA</span>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p class="footer-text">
-                    Designed & Built by <span class="highlight">Yash Kalathiya</span>
-                </p>
-                <p class="footer-note">
-                    Built with ❤️ using HTML, CSS & JavaScript
-                </p>
-            </div>
-        </div>
+        <p>Designed & Built by Yash Kalathiya</p>
+        <p class="footer-year">© 2025</p>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
