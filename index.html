@@ -27,6 +27,12 @@
     <div class="gradient-orb orb-1"></div>
     <div class="gradient-orb orb-2"></div>
     <div class="gradient-orb orb-3"></div>
+    
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
 
     <!-- Header -->
     <header class="header">
@@ -42,6 +48,13 @@
             <button class="mobile-toggle" aria-label="Menu">
                 <span></span>
                 <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Keyboard Shortcut Hint -->
+            <button class="cmd-trigger" id="cmdTrigger" title="Press Cmd/Ctrl + K">
+                <i class="fas fa-terminal"></i>
+                <kbd>⌘K</kbd>
             </button>
         </nav>
     </header>
@@ -458,6 +471,91 @@
         <p class="footer-year">© 2025</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Command Palette Modal -->
+    <div class="cmd-palette" id="cmdPalette">
+        <div class="cmd-overlay"></div>
+        <div class="cmd-modal">
+            <div class="cmd-search">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Type a command or search..." id="cmdInput" autocomplete="off">
+                <kbd>ESC</kbd>
+            </div>
+            <div class="cmd-results" id="cmdResults">
+                <div class="cmd-group">
+                    <span class="cmd-group-title">Navigation</span>
+                    <button class="cmd-item" data-action="scroll" data-target="#work">
+                        <i class="fas fa-briefcase"></i>
+                        <span>View Projects</span>
+                        <kbd>P</kbd>
+                    </button>
+                    <button class="cmd-item" data-action="scroll" data-target="#experience">
+                        <i class="fas fa-building"></i>
+                        <span>Experience</span>
+                        <kbd>E</kbd>
+                    </button>
+                    <button class="cmd-item" data-action="scroll" data-target="#about">
+                        <i class="fas fa-user"></i>
+                        <span>About Me</span>
+                        <kbd>A</kbd>
+                    </button>
+                    <button class="cmd-item" data-action="scroll" data-target="#contact">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                        <kbd>C</kbd>
+                    </button>
+                </div>
+                <div class="cmd-group">
+                    <span class="cmd-group-title">Actions</span>
+                    <button class="cmd-item" data-action="link" data-url="https://github.com/yash-kalathiya">
+                        <i class="fab fa-github"></i>
+                        <span>Open GitHub</span>
+                        <kbd>G</kbd>
+                    </button>
+                    <button class="cmd-item" data-action="link" data-url="https://linkedin.com/in/yashkalathiya">
+                        <i class="fab fa-linkedin"></i>
+                        <span>Open LinkedIn</span>
+                        <kbd>L</kbd>
+                    </button>
+                    <button class="cmd-item" data-action="email">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Send Email</span>
+                        <kbd>M</kbd>
+                    </button>
+                    <button class="cmd-item" data-action="copy" data-value="yashkalathiya164@gmail.com">
+                        <i class="fas fa-copy"></i>
+                        <span>Copy Email</span>
+                    </button>
+                </div>
+                <div class="cmd-group">
+                    <span class="cmd-group-title">Theme</span>
+                    <button class="cmd-item" data-action="theme" data-theme="dark">
+                        <i class="fas fa-moon"></i>
+                        <span>Dark Mode</span>
+                    </button>
+                    <button class="cmd-item" data-action="theme" data-theme="light">
+                        <i class="fas fa-sun"></i>
+                        <span>Light Mode</span>
+                    </button>
+                    <button class="cmd-item" data-action="theme" data-theme="party">
+                        <i class="fas fa-star"></i>
+                        <span>Party Mode 🎉</span>
+                    </button>
+                </div>
+            </div>
+            <div class="cmd-footer">
+                <span><kbd>↑↓</kbd> Navigate</span>
+                <span><kbd>↵</kbd> Select</span>
+                <span><kbd>Cmd/Ctrl + K</kbd> Open</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Copied to clipboard!</span>
+    </div>
+
+    <script src="script.js?v=2"></script>
 </body>
 </html>
